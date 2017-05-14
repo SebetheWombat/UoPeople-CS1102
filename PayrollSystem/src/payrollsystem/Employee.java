@@ -9,11 +9,35 @@ package payrollsystem;
  *
  * @author Sebe
  */
-public class Employee {
+public abstract class Employee {
     private int empID;
     private String name;
     private Vehicle vehicle;
+    
+    public Employee(){
+        System.out.println(".. inside default constructor");
+        empID = 0;
+        name = "";
+    }
+    
+    //With vehicle already created
+    public Employee(int pEmpId, String pName, Vehicle pV){
+        System.out.println(".. inside Employee non-default constructor");
+        empID = pEmpId;
+        name = pName;
+        this.vehicle = pV;
+    }
+    
+    //Create vehicle with employee
+    public Employee(int pEmpId, String pName, String pPlate, String pColor){
+        System.out.println(".. inside Employee non-default constructor");
+        empID = pEmpId;
+        name = pName;
+        this.vehicle = new Vehicle(pPlate, pColor);
+    }
 
+    public abstract double calculatePay();
+    
     /**
      * @return the empID
      */
