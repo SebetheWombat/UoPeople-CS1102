@@ -15,14 +15,14 @@ public abstract class Employee {
     private Vehicle vehicle;
     
     public Employee(){
-        System.out.println(".. inside default constructor");
+        //System.out.println(".. inside default constructor");
         empID = 0;
         name = "";
     }
     
     //With vehicle already created
     public Employee(int pEmpId, String pName, Vehicle pV){
-        System.out.println(".. inside Employee non-default constructor");
+        //System.out.println(".. inside Employee non-default constructor");
         empID = pEmpId;
         name = pName;
         this.vehicle = pV;
