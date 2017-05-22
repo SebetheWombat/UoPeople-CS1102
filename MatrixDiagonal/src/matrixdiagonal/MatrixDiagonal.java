@@ -2,9 +2,13 @@ package matrixdiagonal;
 
 public class MatrixDiagonal {
 
+    //Create constants for square matrix
     public static final int NUMBEROFROWS = 3;
     public static final int NUMBEROFCOLUMNS = 3;
     
+    /*
+    * Declare matrices of various size and send them to calculateDiag
+    */
     public static void main(String[] args) {
         
         int[][] m3 = new int[][]{
@@ -34,6 +38,12 @@ public class MatrixDiagonal {
         
     }
     
+    /*
+    * Takes in a matrix of any size.
+    * Alerts user if matrix is not square.
+    * If square, iterate through matrix and sum up integars stored in secondary
+    * diagonal.
+    */
     public static void calculateDiag(int[][] matrix){
         int numberOfRows = matrix.length;
         int numberOfColumns = matrix[0].length;
